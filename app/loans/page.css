@@ -1,0 +1,122 @@
+/* Filter Tabs */
+.filter-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-tab {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border);
+    background: var(--background);
+    color: var(--foreground);
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.filter-tab:hover {
+    background: var(--muted);
+}
+
+.filter-tab-active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+/* Loans List */
+.loans-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.loan-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.loan-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.loan-parties {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 1;
+}
+
+.loan-party {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.loan-label {
+    font-size: 0.75rem;
+    color: var(--foreground);
+    opacity: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.loan-value {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.loan-arrow {
+    width: 20px;
+    height: 20px;
+    opacity: 0.4;
+    flex-shrink: 0;
+}
+
+.loan-amount {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: var(--muted);
+    border-radius: 0.5rem;
+}
+
+.loan-amount-label {
+    font-size: 0.875rem;
+    opacity: 0.7;
+}
+
+.loan-amount-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.loan-amount-original {
+    font-size: 0.875rem;
+    opacity: 0.6;
+}
+
+.loan-payments {
+    font-size: 0.875rem;
+    opacity: 0.7;
+}
+
+@media (max-width: 640px) {
+    .loan-parties {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .loan-arrow {
+        transform: rotate(90deg);
+    }
+}

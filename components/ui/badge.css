@@ -1,0 +1,23 @@
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 9999px;
+}
+
+.badge-active {
+    background: var(--active);
+    color: var(--active-text);
+}
+
+.badge-paid {
+    background: var(--paid);
+    color: var(--paid-text);
+}
+
+.badge-overdue {
+    background: var(--overdue);
+    color: var(--overdue-text);
+}

@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+:root {
+  /* Colors */
+  --primary: #6366f1;
+  --primary-dark: #4f46e5;
+  --danger: #ef4444;
+  --danger-dark: #dc2626;
+  --success: #10b981;
+  --warning: #f59e0b;
+  
+  /* Neutrals */
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+  --muted: #f3f4f6;
+  --border: #e5e7eb;
+  --card: #ffffff;
+  
+  /* Semantic */
+  --overdue: #fee2e2;
+  --overdue-text: #991b1b;
+  --active: #dbeafe;
+  --active-text: #1e40af;
+  --paid: #d1fae5;
+  --paid-text: #065f46;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #fafafa;
+    --muted: #1f2937;
+    --border: #374151;
+    --card: #111827;
+    
+    --overdue: #7f1d1d;
+    --overdue-text: #fecaca;
+    --active: #1e3a8a;
+    --active-text: #bfdbfe;
+    --paid: #064e3b;
+    --paid-text: #a7f3d0;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Base styles for buttons and inputs */
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Touch targets must be at least 44x44 for mobile */
+button, input, select {
+  min-height: 44px;
+}
+
+/* Utility classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
