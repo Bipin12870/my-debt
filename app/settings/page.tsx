@@ -85,9 +85,9 @@ export default function SettingsPage() {
                                     </p>
                                 </div>
                                 <label htmlFor="import-file">
-                                    <Button as="span" disabled={isImporting}>
+                                    <span className={`btn btn-primary btn-md ${isImporting ? 'disabled' : ''}`}>
                                         {isImporting ? 'Importing...' : '⬆️ Import'}
-                                    </Button>
+                                    </span>
                                 </label>
                                 <input
                                     id="import-file"
@@ -95,6 +95,7 @@ export default function SettingsPage() {
                                     accept=".json"
                                     onChange={handleImport}
                                     style={{ display: 'none' }}
+                                    disabled={isImporting}
                                 />
                             </div>
                         </div>
