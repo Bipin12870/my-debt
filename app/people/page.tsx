@@ -109,10 +109,10 @@ export default function PeoplePage() {
                 title="Delete Person"
             >
                 <p>Are you sure you want to delete <strong>{deletingPerson?.name}</strong>?</p>
-                <p style={{ marginTop: '0.5rem', fontSize: '0.875rem', opacity: 0.7 }}>
+                <p className="text-muted">
                     This will not delete associated loans.
                 </p>
-                <div style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem' }}>
+                <div className="form-actions">
                     <Button
                         variant="danger"
                         onClick={() => deletingPerson && handleDelete(deletingPerson)}

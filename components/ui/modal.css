@@ -1,16 +1,16 @@
 .modal {
     border: none;
-    border-radius: 1rem;
+    border-radius: var(--radius-xl);
     padding: 0;
     max-width: 90vw;
     width: 500px;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: var(--shadow-lg);
     background: var(--card);
 }
 
 .modal::backdrop {
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
 }
 
 .modal-content {
@@ -22,43 +22,47 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem;
+    padding: var(--space-6);
     border-bottom: 1px solid var(--border);
 }
 
 .modal-title {
-    font-size: 1.25rem;
-    font-weight: 600;
+    font-size: var(--text-h2);
+    font-weight: 700;
     margin: 0;
+    color: var(--foreground);
 }
 
 .modal-close {
-    background: transparent;
+    background: var(--muted);
     border: none;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     cursor: pointer;
     color: var(--foreground);
-    opacity: 0.6;
-    transition: opacity 0.2s;
-    padding: 0.25rem;
-    line-height: 1;
-    width: 32px;
-    height: 32px;
+    transition: all var(--transition-fast);
+    padding: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .modal-close:hover {
-    opacity: 1;
+    background: var(--border);
+    transform: rotate(90deg);
 }
 
 .modal-body {
-    padding: 1.5rem;
+    padding: var(--space-6);
 }
 
 @media (max-width: 640px) {
     .modal {
         max-width: 95vw;
+        width: 100%;
+        margin: auto auto 0 auto;
+        border-radius: var(--radius-xl) var(--radius-xl) 0 0;
     }
 }

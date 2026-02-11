@@ -92,7 +92,7 @@ export default function HomePage() {
           <div className="loans-list">
             {overdueLoans.map((loan) => (
               <Link key={loan.id} href={`/loans/${loan.id}`} style={{ textDecoration: 'none' }}>
-                <Card>
+                <Card className="card-clickable">
                   <CardBody>
                     <div className="loan-card-compact">
                       <div className="loan-compact-info">
@@ -114,7 +114,7 @@ export default function HomePage() {
       {/* Recent Active Loans */}
       {activeLoans.length > 0 && (
         <div className="section">
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+          <div className="section-header">
             <h2 className="section-title">Active Loans</h2>
             <Link href="/loans">
               <Button variant="ghost" size="sm">View All →</Button>
@@ -123,7 +123,7 @@ export default function HomePage() {
           <div className="loans-list">
             {activeLoans.slice(0, 5).map((loan) => (
               <Link key={loan.id} href={`/loans/${loan.id}`} style={{ textDecoration: 'none' }}>
-                <Card>
+                <Card className="card-clickable">
                   <CardBody>
                     <div className="loan-card-compact">
                       <div className="loan-compact-info">

@@ -85,7 +85,7 @@ export default function SettingsPage() {
                                     </p>
                                 </div>
                                 <label htmlFor="import-file">
-                                    <span className={`btn btn-primary btn-md ${isImporting ? 'disabled' : ''}`}>
+                                    <span className={`btn btn-primary ${isImporting ? 'disabled' : ''}`}>
                                         {isImporting ? 'Importing...' : '⬆️ Import'}
                                     </span>
                                 </label>

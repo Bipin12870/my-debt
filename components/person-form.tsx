@@ -53,7 +53,7 @@ export function PersonForm({ person, onSuccess, onCancel }: PersonFormProps) {
                 autoFocus
             />
 
-            <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem' }}>
+            <div className="form-actions">
                 <Button type="submit" disabled={isSubmitting} fullWidth>
                     {person ? 'Update' : 'Add'} Person
                 </Button>

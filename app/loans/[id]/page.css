@@ -2,136 +2,150 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-6);
 }
 
 .detail-actions {
     display: flex;
-    gap: 0.5rem;
+    gap: var(--space-2);
 }
 
 .detail-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--space-6);
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: var(--space-4);
 }
 
 .detail-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--space-6);
 }
 
 .detail-item {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: var(--space-1);
 }
 
 .detail-label {
-    font-size: 0.875rem;
-    font-weight: 500;
-    opacity: 0.6;
+    font-size: var(--text-caption);
+    font-weight: 700;
+    opacity: 0.5;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.05em;
 }
 
 .detail-value {
-    font-size: 1.125rem;
-    font-weight: 600;
+    font-size: var(--text-body);
+    font-weight: 700;
 }
 
 .detail-notes {
-    margin-top: 1.5rem;
-    padding-top: 1.5rem;
+    margin-top: var(--space-6);
+    padding-top: var(--space-6);
     border-top: 1px solid var(--border);
 }
 
 .detail-notes p {
-    margin-top: 0.5rem;
+    margin-top: var(--space-2);
     line-height: 1.6;
+    color: var(--foreground);
+    opacity: 0.8;
 }
 
 /* Balance Display */
 .balance-display {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: var(--space-6);
 }
 
 .balance-remaining {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
-    padding: 2rem;
+    gap: var(--space-2);
+    padding: var(--space-8);
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-    border-radius: 1rem;
+    border-radius: var(--radius-lg);
     color: white;
+    box-shadow: var(--shadow-md);
 }
 
 .balance-label {
-    font-size: 0.875rem;
-    opacity: 0.9;
+    font-size: var(--text-caption);
+    font-weight: 700;
+    opacity: 0.8;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.1em;
 }
 
 .balance-amount {
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1;
 }
 
 .balance-stats {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: var(--space-3);
 }
 
 .balance-stat {
-    padding: 0.75rem;
+    padding: var(--space-3);
     background: var(--muted);
-    border-radius: 0.5rem;
+    border-radius: var(--radius-md);
     text-align: center;
-    font-size: 0.875rem;
+    font-size: var(--text-caption);
+    font-weight: 600;
 }
 
 /* Payments List */
 .payments-list {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: var(--space-2);
 }
 
 .payment-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.75rem;
+    padding: var(--space-3) var(--space-4);
     background: var(--muted);
-    border-radius: 0.5rem;
+    border-radius: var(--radius-md);
+    transition: transform var(--transition-fast);
+}
+
+.payment-item:hover {
+    transform: translateX(4px);
+    background: var(--border);
 }
 
 .payment-date {
-    font-size: 0.875rem;
-    opacity: 0.8;
+    font-size: var(--text-caption);
+    font-weight: 600;
+    opacity: 0.6;
 }
 
 .payment-amount {
-    font-weight: 600;
-    font-size: 1.125rem;
+    font-weight: 800;
+    font-size: var(--text-body);
     color: var(--success);
 }
 
 @media (max-width: 640px) {
     .balance-amount {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .detail-grid {
         grid-template-columns: 1fr;
+        gap: var(--space-4);
     }
 }

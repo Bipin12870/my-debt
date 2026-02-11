@@ -1,10 +1,12 @@
 .badge {
     display: inline-flex;
     align-items: center;
-    padding: 0.25rem 0.75rem;
-    font-size: 0.875rem;
-    font-weight: 500;
+    padding: var(--space-1) var(--space-3);
+    font-size: var(--text-caption);
+    font-weight: 600;
     border-radius: 9999px;
+    letter-spacing: 0.025em;
+    text-transform: uppercase;
 }
 
 .badge-active {

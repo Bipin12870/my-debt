@@ -98,7 +98,7 @@ export default function LoanDetailPage() {
 
             <Card>
                 <CardHeader>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <div className="flex-between">
                         <span>Balance</span>
                         {balance > 0 && (
                             <Button size="sm" onClick={() => setIsPaymentModalOpen(true)}>
@@ -181,10 +181,10 @@ export default function LoanDetailPage() {
                 title="Delete Loan"
             >
                 <p>Are you sure you want to delete this loan?</p>
-                <p style={{ marginTop: '0.5rem', fontSize: '0.875rem', opacity: 0.7 }}>
+                <p className="text-muted" style={{ marginTop: 'var(--space-2)' }}>
                     This will also delete all associated payments. This action cannot be undone.
                 </p>
-                <div style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem' }}>
+                <div className="form-actions">
                     <Button variant="danger" onClick={handleDelete} fullWidth>
                         Delete Loan
                     </Button>

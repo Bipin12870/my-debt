@@ -73,9 +73,11 @@ export function LoanForm({ loan, onSuccess, onCancel }: LoanFormProps) {
 
     if (!people || people.length === 0) {
         return (
-            <div style={{ padding: '1rem' }}>
-                <p>Please add people first before creating a loan.</p>
-                <Button onClick={onCancel} style={{ marginTop: '1rem' }}>Close</Button>
+            <div className="page-container" style={{ textAlign: 'center' }}>
+                <p className="text-muted" style={{ marginBottom: 'var(--space-6)' }}>
+                    Please add people first before creating a loan.
+                </p>
+                <Button onClick={onCancel}>Close</Button>
             </div>
         );
     }
@@ -153,9 +155,9 @@ export function LoanForm({ loan, onSuccess, onCancel }: LoanFormProps) {
                 placeholder="Add any notes about this loan..."
             />
 
-            {errors.submit && <p style={{ color: 'var(--danger)', marginBottom: '1rem' }}>{errors.submit}</p>}
+            {errors.submit && <p className="error-message">{errors.submit}</p>}
 
-            <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem' }}>
+            <div className="form-actions">
                 <Button type="submit" disabled={isSubmitting} fullWidth>
                     {loan ? 'Update' : 'Create'} Loan
                 </Button>

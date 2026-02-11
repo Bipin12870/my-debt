@@ -2,11 +2,18 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
-    font-weight: 500;
-    border-radius: 0.5rem;
-    transition: all 0.15s ease;
+    gap: var(--space-2);
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
     text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    min-height: 44px;
+    /* Accessibility requirement */
+    height: var(--input-height);
+    padding: 0 var(--space-6);
 }
 
 .btn:disabled,
@@ -18,18 +25,24 @@
 
 /* Sizes */
 .btn-sm {
-    padding: 0.5rem 1rem;
-    font-size: 0.875rem;
+    height: 2rem;
+    /* 32px */
+    min-height: 32px;
+    padding: 0 var(--space-3);
+    font-size: var(--text-caption);
 }
 
 .btn-md {
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
+    height: var(--input-height);
+    padding: 0 var(--space-6);
+    font-size: var(--text-body);
 }
 
 .btn-lg {
-    padding: 1rem 2rem;
-    font-size: 1.125rem;
+    height: 3.5rem;
+    /* 56px */
+    padding: 0 var(--space-8);
+    font-size: var(--text-h3);
 }
 
 .btn-full {
@@ -46,6 +59,10 @@
     background: var(--primary-dark);
 }
 
+.btn-primary:active:not(:disabled):not(.disabled) {
+    transform: scale(0.98);
+}
+
 .btn-secondary {
     background: var(--muted);
     color: var(--foreground);
@@ -54,6 +71,10 @@
 
 .btn-secondary:hover:not(:disabled):not(.disabled) {
     background: var(--border);
+}
+
+.btn-secondary:active:not(:disabled):not(.disabled) {
+    transform: scale(0.98);
 }
 
 .btn-danger {
@@ -65,6 +86,10 @@
     background: var(--danger-dark);
 }
 
+.btn-danger:active:not(:disabled):not(.disabled) {
+    transform: scale(0.98);
+}
+
 .btn-ghost {
     background: transparent;
     color: var(--foreground);
@@ -72,4 +97,8 @@
 
 .btn-ghost:hover:not(:disabled):not(.disabled) {
     background: var(--muted);
+}
+
+.btn-ghost:active:not(:disabled):not(.disabled) {
+    background: var(--border);
 }

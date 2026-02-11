@@ -69,7 +69,7 @@ export function PaymentForm({ loanId, maxAmount, onSuccess, onCancel }: PaymentF
                 autoFocus
             />
 
-            <div style={{ fontSize: '0.875rem', opacity: 0.7, marginBottom: '1rem', marginTop: '-0.5rem' }}>
+            <div className="text-muted" style={{ marginBottom: 'var(--space-4)', marginTop: 'calc(var(--space-2) * -1)' }}>
                 Remaining balance: ${maxAmount.toFixed(2)}
             </div>
 
@@ -81,9 +81,9 @@ export function PaymentForm({ loanId, maxAmount, onSuccess, onCancel }: PaymentF
                 error={errors.date}
             />
 
-            {errors.submit && <p style={{ color: 'var(--danger)', marginBottom: '1rem' }}>{errors.submit}</p>}
+            {errors.submit && <p className="error-message">{errors.submit}</p>}
 
-            <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem' }}>
+            <div className="form-actions">
                 <Button type="submit" disabled={isSubmitting} fullWidth>
                     Add Payment
                 </Button>
