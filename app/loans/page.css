@@ -68,8 +68,7 @@
 
 .loan-label {
     font-size: var(--text-caption);
-    color: var(--foreground);
-    opacity: 0.5;
+    color: var(--text-secondary);
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 0.05em;
@@ -99,7 +98,7 @@
 .loan-amount-label {
     font-size: var(--text-caption);
     font-weight: 600;
-    opacity: 0.6;
+    color: var(--text-secondary);
 }
 
 .loan-amount-value {
@@ -110,14 +109,13 @@
 
 .loan-amount-original {
     font-size: var(--text-caption);
-    opacity: 0.5;
+    color: var(--text-secondary);
 }
 
 .loan-payments {
     font-size: var(--text-caption);
     font-weight: 600;
-    color: var(--foreground);
-    opacity: 0.6;
+    color: var(--text-secondary);
     display: flex;
     align-items: center;
     gap: var(--space-2);

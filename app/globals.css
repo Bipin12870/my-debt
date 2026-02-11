@@ -10,10 +10,11 @@
   --warning: #f59e0b;
 
   /* Neutrals */
-  --background: #ffffff;
-  --foreground: #0a0a0a;
+  --background: #f9fafb;
+  --foreground: #111827;
+  --text-secondary: #4b5563;
   --muted: #f3f4f6;
-  --border: #e5e7eb;
+  --border: #e2e8f0;
   --card: #ffffff;
 
   /* Semantic */
@@ -201,8 +202,7 @@ h3,
 }
 
 .text-muted {
-  color: var(--foreground);
-  opacity: 0.6;
+  color: var(--text-secondary);
   font-size: var(--text-caption);
 }
 

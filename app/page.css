@@ -62,7 +62,7 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    opacity: 0.6;
+    color: var(--text-secondary);
 }
 
 .summary-value {
@@ -134,8 +134,7 @@
 }
 
 .empty-text {
-    color: var(--foreground);
-    opacity: 0.6;
+    color: var(--text-secondary);
     margin-bottom: var(--space-6);
     max-width: 300px;
 }
